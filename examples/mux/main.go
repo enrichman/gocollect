@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	mux := http.DefaultServeMux // YES!
+	mux := http.DefaultServeMux
 
 	mux.Handle("/hello", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "hello")

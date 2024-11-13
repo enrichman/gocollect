@@ -14,7 +14,7 @@ func main() {
 		fmt.Fprintf(w, "hello")
 	}))
 
-	mux.HandleFunc("/collect", gocollect.Collect("tmp"))
+	mux.Handle("/collect", gocollect.Collect("tmp"))
 
 	fmt.Println(http.ListenAndServe(":8082", mux))
 }
